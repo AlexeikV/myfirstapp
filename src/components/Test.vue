@@ -2,9 +2,10 @@
   <!--Para poder comentar debe seguir eesta asintaxis que estoy ocuapndo en este momento-->
   <!--En un template al menos lo que he visto solo puede estar todo contenido dentro de una misma etiqueta-->
   <div>
-
+    <!--Con v-html se maneja el codigo html desde una variable en javascript-->
     <div v-html="myHTML"/>
     <div v-text="title"/>
+    <!--Tenemos todos los validadores logicos-->
     <div v-if="showName">
       <p>{{user.firstName}}</p>
     </div>
