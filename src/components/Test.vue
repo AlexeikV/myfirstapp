@@ -12,6 +12,12 @@
     <div v-else>
       <p>No tiene permitido ver el nombre</p>
     </div>
+    <hr>
+    <ul>
+      <li v-for="task in tasks">
+        {{task.title}}
+      </li>
+    </ul>
   </div>
 </template>
 
@@ -25,7 +31,12 @@
           lastName: 'MacMillan'
         },
         myHTML: '<h1>hola vue<h1/>',
-        showName: false
+        showName: false,
+        tasks:[
+          {title:'eat'},
+          {title:'dinner'}
+
+        ]
       }
     }
   }
