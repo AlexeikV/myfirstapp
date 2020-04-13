@@ -18,6 +18,10 @@
         {{task.title}}
       </li>
     </ul>
+    <!--Empezaremos con metodos en este caso click-->
+    <button type="button" v-on:click="saludar">
+      Click Me
+    </button>
   </div>
 </template>
 
@@ -36,6 +40,11 @@
           {title:'eat'},
           {title:'dinner'}
         ]
+      }
+    },
+    methods: {
+      saludar(){
+        alert('hello')
       }
     }
   }
