@@ -35,7 +35,6 @@
         tasks:[
           {title:'eat'},
           {title:'dinner'}
-
         ]
       }
     }
