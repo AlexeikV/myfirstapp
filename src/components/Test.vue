@@ -25,6 +25,9 @@
     </button>
     <input type="text" v-on:keyup="typing">
     <input type="text" v-on:keyup.enter="TypeEnter">
+    <div>
+      {{fullName}}
+    </div>
   </div>
 </template>
 
@@ -57,6 +60,12 @@
       //Tecleo un enter
       TypeEnter(e){
         console.log('Dio un enter');
+      }
+    },
+    //Para tener datos que se estan cambiando de manera dinamica
+    computed:{
+      fullName(){
+        return this.user.firstName+' '+this.user.lastName;
       }
     }
   }
