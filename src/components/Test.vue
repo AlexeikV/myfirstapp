@@ -19,9 +19,12 @@
       </li>
     </ul>
     <!--Empezaremos con metodos en este caso click-->
-    <button type="button" v-on:click="saludar">
+    <input type="text" v-model="user.firstName">
+    <button type="button" v-on:click="saludar(user.firstName)">
       Click Me
     </button>
+    <input type="text" v-on:keyup="typing">
+    <input type="text" v-on:keyup.enter="TypeEnter">
   </div>
 </template>
 
@@ -42,9 +45,18 @@
         ]
       }
     },
+    //Ingreso de nuevo metodo
     methods: {
-      saludar(){
-        alert('hello')
+      saludar(cadena){
+        alert('hello '+cadena)
+      },
+      //Teclea cualquier cosa
+      typing(e){
+        console.log(e.target.value);
+      },
+      //Tecleo un enter
+      TypeEnter(e){
+        console.log('Dio un enter');
       }
     }
   }
