@@ -1,7 +1,7 @@
 <template>
   <!--Para poder comentar debe seguir eesta asintaxis que estoy ocuapndo en este momento-->
   <!--En un template al menos lo que he visto solo puede estar todo contenido dentro de una misma etiqueta-->
-  <div>
+  <div class="test">
     <!--Con v-html se maneja el codigo html desde una variable en javascript-->
     <div v-html="myHTML"/>
     <div v-text="title"/>
@@ -23,10 +23,17 @@
     <button type="button" v-on:click="saludar(user.firstName)">
       Click Me
     </button>
-    <input type="text" v-on:keyup="typing">
-    <input type="text" v-on:keyup.enter="TypeEnter">
+    <div>
+      <input type="text" v-on:keyup="typing">
+    </div>
+    <div>
+      <input type="text" v-on:keyup.enter="TypeEnter">
+    </div>
     <div>
       {{fullName}}
+    </div>
+    <div>
+      {{msg}}
     </div>
   </div>
 </template>
@@ -67,11 +74,19 @@
       fullName(){
         return this.user.firstName+' '+this.user.lastName;
       }
+    },
+    props:{
+      msg:{
+        type:String,
+        default: "Mensaje por defecto"
+      }
     }
   }
 
 </script>
 
 <style media="screen">
-
+  .test{
+    background: #eee;
+  }
 </style>
