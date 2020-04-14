@@ -2,7 +2,22 @@
   <div id="app">
     <h1>Hola mundo</h1>
     <!-- <Test msg="Hola!!"/> -->
-    <User/>
+    <nav>
+      <ul>
+        <li>
+          <router-link to="/test">
+            Test
+          </router-link>
+        </li>
+        <li>
+          <router-link to="/">
+            User
+          </router-link>
+        </li>
+      </ul>
+    </nav>
+    <hr>
+    <router-view></router-view>
   </div>
 </template>
 
